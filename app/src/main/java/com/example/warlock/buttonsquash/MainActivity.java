@@ -21,14 +21,14 @@ public class MainActivity extends AppCompatActivity {
     Button btn; int score; String scr; TextView scoredisp; boolean click;
     public static Handler myHandler = new Handler();
     private static final int TIME_TO_WAIT = 700;
-    Runnable myRunnable;
+    Runnable myRunnable; MediaPlayer btsound;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         btn=(Button) findViewById(R.id.imgbtn);
-        final MediaPlayer mp = MediaPlayer.create(this,R.raw.btnclick);
+
         scoredisp=(TextView)findViewById(R.id.score);
         click=false;
 
@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 btn.setText("HERE!");
-                mp.start();
+                playmusic();
                 stop();
                 score++;
                 scr=String.valueOf(score);
@@ -109,6 +109,19 @@ public class MainActivity extends AppCompatActivity {
     public void restart() {
         myHandler.removeCallbacks(myRunnable);
         myHandler.postDelayed(myRunnable, TIME_TO_WAIT);
+    }
+
+    public void playmusic(){
+        btsound = MediaPlayer.create(this,R.raw.btnclick);
+        btsound.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+                mp.reset();
+                mp.release();
+                btsound = null;
+            }
+        });
+        btsound.start();
     }
 }
 
