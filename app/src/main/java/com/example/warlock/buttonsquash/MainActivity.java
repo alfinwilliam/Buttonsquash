@@ -2,10 +2,12 @@ package com.example.warlock.buttonsquash;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.media.MediaPlayer;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.TypedValue;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -13,24 +15,32 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.graphics.Color;
+import android.util.DisplayMetrics;
 
 import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btn; int score; String scr; TextView scoredisp; boolean click;
+    Button btn; int score=0; String scr; TextView scoredisp; boolean click;
     public static Handler myHandler = new Handler();
     private static final int TIME_TO_WAIT = 700;
-    Runnable myRunnable; MediaPlayer btsound;
+    Runnable myRunnable; MediaPlayer btsound; LinearLayout scrlayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         btn=(Button) findViewById(R.id.imgbtn);
-
+        scrlayout=(LinearLayout)findViewById(R.id.scorelayout);
+        scrlayout.setBackgroundColor(Color.parseColor("#d3d3d3"));
+        btn.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
+        btn.setX(380);
+        btn.setY(650);
         scoredisp=(TextView)findViewById(R.id.score);
+        String initscr=String.valueOf(score);
+        scoredisp.setText(initscr);
         click=false;
+
 
 
         btn.setOnClickListener(new View.OnClickListener() {
@@ -39,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
                 btn.setText("HERE!");
                 playmusic();
                 stop();
-                score++;
+                score+=5;
                 scr=String.valueOf(score);
                 scoredisp.setText(scr);
 
@@ -123,6 +133,7 @@ public class MainActivity extends AppCompatActivity {
         });
         btsound.start();
     }
+
 }
 
 

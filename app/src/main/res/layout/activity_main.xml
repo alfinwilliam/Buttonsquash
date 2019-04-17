@@ -9,8 +9,10 @@
     >
 
     <LinearLayout
+        android:id="@+id/scorelayout"
         android:layout_width="match_parent"
-        android:layout_height="30dp">
+        android:layout_height="50dp"
+        tools:background="@android:color/darker_gray">
 
 
         <TextView
@@ -20,6 +22,8 @@
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="125dp"
             android:text="Score:"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
             android:textSize="24sp" />
 
         <TextView
@@ -28,7 +32,9 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="8dp"
-            android:textSize="24sp" />
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"/>
 
     </LinearLayout>
 
@@ -37,9 +43,9 @@
         android:id="@+id/imgbtn"
         android:layout_width="100dp"
         android:layout_height="60dp"
+        android:color="@color/colorPrimary"
         android:scaleType="fitCenter"
-        android:color="#ff0000"
         android:text="START!"
-         />
+        android:textColor="@android:color/white" />
 
 </LinearLayout>

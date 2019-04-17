@@ -10,10 +10,12 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="100dp"
         android:gravity="center"
         android:text="Game Over !"
-        android:textSize="32sp" />
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="50sp"
+        android:elevation="10dp"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -27,25 +29,45 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="50dp"
-            android:text="Score:"
-            android:textSize="30sp" />
+            android:text="High"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/his"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+
 
         <TextView
             android:id="@+id/finalscore"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="8dp"
-            android:textSize="30sp" />
+            android:layout_marginLeft="15dp"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="30sp"
+            android:textStyle="bold" />
 
     </LinearLayout>
 
     <Button
         android:id="@+id/pagain"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="115dp"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="85dp"
         android:layout_marginTop="100dp"
+        android:background="@android:color/holo_red_dark"
         android:text="Play Again"
-        android:textSize="20sp" />
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        />
 
 </LinearLayout>
