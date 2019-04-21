@@ -4,15 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bluebg"
     android:orientation="vertical"
-    tools:context=".MainActivity"
-    >
+    tools:context=".MainActivity">
 
     <LinearLayout
         android:id="@+id/scorelayout"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        tools:background="@android:color/darker_gray">
+        android:layout_height="50dp">
 
 
         <TextView
@@ -22,9 +21,9 @@
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="125dp"
             android:text="Score:"
-            android:textStyle="bold"
             android:textColor="@android:color/white"
-            android:textSize="24sp" />
+            android:textSize="24sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/score"
@@ -34,7 +33,7 @@
             android:layout_marginLeft="8dp"
             android:textColor="@android:color/white"
             android:textSize="24sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
 
     </LinearLayout>
 

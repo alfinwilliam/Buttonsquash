@@ -25,6 +25,8 @@ public class result extends AppCompatActivity {
         scor=getIntent().getStringExtra("score");
         fscore.setText(scor);
 
+        //code to update highscore
+
         LoadInt();
 
         scrcheck=Integer.parseInt(scor);
@@ -38,6 +40,7 @@ public class result extends AppCompatActivity {
         highs.setText(Integer.toString(hs));
 
 
+        //Intent to start another game
 
         pagain.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -48,6 +51,8 @@ public class result extends AppCompatActivity {
             }
         });
     }
+
+    //background music starts playing on activity oncreate
 
     public void gomusic(){
         gameover = MediaPlayer.create(this,R.raw.go);
@@ -62,6 +67,7 @@ public class result extends AppCompatActivity {
         gameover.start();
     }
 
+    // shared preference to store high-score from current game
 
     public void SaveInt(String key, int value){
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());

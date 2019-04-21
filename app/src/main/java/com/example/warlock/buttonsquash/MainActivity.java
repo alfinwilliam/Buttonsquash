@@ -32,8 +32,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         btn=(Button) findViewById(R.id.imgbtn);
         scrlayout=(LinearLayout)findViewById(R.id.scorelayout);
-        scrlayout.setBackgroundColor(Color.parseColor("#d3d3d3"));
+        scrlayout.setBackgroundColor(Color.parseColor("#000b33"));
+        // sets background color white
         btn.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
+        //random xy coordinates generated for button
         btn.setX(380);
         btn.setY(650);
         scoredisp=(TextView)findViewById(R.id.score);
@@ -73,6 +75,8 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
+    //random x y coordinates for button
 
      int xvalue() {
         Random randomGenerator = new Random();
