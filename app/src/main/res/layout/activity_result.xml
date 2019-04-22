@@ -7,7 +7,7 @@
     android:background="@drawable/bluebg"
     android:orientation="vertical"
     tools:context=".result">
-
+    <!--
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -16,7 +16,15 @@
         android:gravity="center"
         android:text="Game Over !"
         android:textColor="@android:color/white"
-        android:textSize="50sp" />
+        android:textSize="50sp" /> -->
+
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/go"
+        android:scaleType="fitCenter" />
 
     <LinearLayout
         android:layout_width="match_parent"

@@ -24,12 +24,13 @@ public class MainActivity extends AppCompatActivity {
     Button btn; int score=0; String scr; TextView scoredisp; boolean click;
     public static Handler myHandler = new Handler();
     private static final int TIME_TO_WAIT = 700;
-    Runnable myRunnable; MediaPlayer btsound; LinearLayout scrlayout;
+    Runnable myRunnable; MediaPlayer btsound,bgmusik; LinearLayout scrlayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        bgmusic();
         btn=(Button) findViewById(R.id.imgbtn);
         scrlayout=(LinearLayout)findViewById(R.id.scorelayout);
         scrlayout.setBackgroundColor(Color.parseColor("#000b33"));
@@ -102,6 +103,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void run() {
                 if(!click) {
+                    bgmusik.stop();
                     Intent result = new Intent(MainActivity.this, com.example.warlock.buttonsquash.result.class);
                     result.putExtra("score",scr);
                     startActivity(result);
@@ -136,6 +138,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         btsound.start();
+    }
+
+    public void bgmusic(){
+        bgmusik=MediaPlayer.create(this,R.raw.ingame);
+        bgmusik.setLooping(true);
+        bgmusik.start();
     }
 
 }

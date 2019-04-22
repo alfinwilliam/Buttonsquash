@@ -4,31 +4,51 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bluebg"
     android:orientation="vertical"
     tools:context=".menu">
 
     <ImageView
         android:layout_width="130dp"
         android:layout_height="100dp"
-        android:layout_marginLeft="120dp"
+        android:layout_marginLeft="110dp"
         android:layout_marginTop="100dp"
-        android:background="@drawable/menu" />
+        android:background="@drawable/button" />
 
-    <TextView
+
+    <ImageView
+        android:layout_width="130dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="143dp"
+        android:layout_marginTop="-39dp"
+        android:background="@drawable/smash" />
+
+    <!--<TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="85dp"
         android:layout_marginTop="10dp"
         android:text="Button Squash"
         android:textSize="32sp"
-        tools:fontFamily="serif" />
+        tools:fontFamily="serif" />-->
 
-    <Button
+    <ImageButton
         android:id="@+id/stgame"
-        android:layout_width="170dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="105dp"
-        android:layout_marginTop="80dp"
-        android:text="Start Game" />
+        android:layout_width="150dp"
+        android:layout_height="70dp"
+        android:layout_marginLeft="108dp"
+        android:layout_marginTop="78dp"
+        android:background="@drawable/playbut" />
+
+    <ImageButton
+        android:id="@+id/mbtn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/mutebtn"
+        android:layout_gravity="right"
+        android:layout_marginTop="175dp"
+        android:layout_marginRight="5dp"/>
+       <!-- -->
+
 
 </LinearLayout>

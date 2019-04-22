@@ -45,7 +45,7 @@ public class result extends AppCompatActivity {
         pagain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent game=new Intent(result.this,MainActivity.class);
+                Intent game=new Intent(result.this,menu.class);
                 startActivity(game);
                 finish();
             }
