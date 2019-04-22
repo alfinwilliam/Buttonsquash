@@ -146,6 +146,12 @@ public class MainActivity extends AppCompatActivity {
         bgmusik.start();
     }
 
+    // to stop music as soon as app is closed.
+    protected void onStop(){
+        super.onStop();
+        bgmusik.stop();
+    }
+
 }
 
 

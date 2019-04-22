@@ -37,7 +37,6 @@ public class menu extends AppCompatActivity {
                 if(n==0){
                     bgm.stop();
                     bgm.reset();
-                    bgm.release();
                     n=1;
                 }
                 else{
@@ -54,5 +53,13 @@ public class menu extends AppCompatActivity {
         bgm.setLooping(true);
         bgm.start();
 
+    }
+
+
+    // to stop music as soon as app is closed.
+    @Override
+    protected void onStop(){
+        super.onStop();
+        bgm.stop();
     }
 }
