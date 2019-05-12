@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "708289932067",
+    "firebase_url": "https://buttonsquash-1bb3c.firebaseio.com",
+    "project_id": "buttonsquash-1bb3c",
+    "storage_bucket": "buttonsquash-1bb3c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:708289932067:android:b776f2735662778d",
+        "android_client_info": {
+          "package_name": "com.example.warlock.buttonsquash"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "708289932067-36jbis93k26phbn3t59a3cbgbvv3jmie.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.warlock.buttonsquash",
+            "certificate_hash": "0ec5cada919b5fb97f5bbfe79b17df971be0c81e"
+          }
+        },
+        {
+          "client_id": "708289932067-l137asp3d6l98bkn7qkbblipo38i0op3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-IyAWDylOp7h43VOBl54ST84b0n2dRAI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "708289932067-l137asp3d6l98bkn7qkbblipo38i0op3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
