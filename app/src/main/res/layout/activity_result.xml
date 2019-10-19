@@ -21,7 +21,7 @@
     <ImageView
         android:layout_width="250dp"
         android:layout_height="100dp"
-        android:layout_marginLeft="60dp"
+        android:layout_gravity="center_horizontal"
         android:layout_marginTop="100dp"
         android:background="@drawable/go"
         android:scaleType="fitCenter" />
@@ -37,7 +37,7 @@
             android:id="@+id/scrdisp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
+            android:layout_marginLeft="40dp"
             android:text="High"
             android:textColor="@android:color/darker_gray"
             android:textSize="30sp"
@@ -69,7 +69,7 @@
         android:id="@+id/pagain"
         android:layout_width="180dp"
         android:layout_height="50dp"
-        android:layout_marginLeft="85dp"
+        android:layout_gravity="center_horizontal"
         android:layout_marginTop="100dp"
         android:background="@android:color/holo_red_dark"
         android:text="Play Again"
